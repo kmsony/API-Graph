@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "QoCgmALYBDmyE8SYTXCiLp6OH7epZ5GB93B2LPza+MI=",
+  "Source": "FetchUsersAPI",
+  "BasePath": "_content/FetchUsersAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FetchUsersAPI</name>
+    </assembly>
+    <members>
+        <member name="T:FetchUsersAPI.Controllers.GraphServiceClientFactory">
+            <summary>
+            handle token acquisition
+            </summary>
+        </member>
+        <member name="M:FetchUsersAPI.Controllers.GraphServiceClientFactory.#ctor(System.Net.Http.IHttpClientFactory,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="httpClientFactory"></param>
+            <param name="configuration"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:FetchUsersAPI.Controllers.GraphServiceClientFactory.GetGraphServiceClientAsync(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="tenantId"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="T:FetchUsersAPI.Controllers.usersController">
+            <summary>
+            usersController
+            </summary>
+        </member>
+        <member name="M:FetchUsersAPI.Controllers.usersController.#ctor(Microsoft.Extensions.Configuration.IConfiguration,FetchUsersAPI.Controllers.GraphServiceClientFactory,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+             DI in constructor
+            </summary>
+            <param name="configuration"></param>
+            <param name="graphServiceClientFactory"></param>
+            <param name="httpContextAccessor"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:FetchUsersAPI.Controllers.usersController.GetUsers(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="tenantId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:FetchUsersAPI.Exceptions.ConflictException">
+            <summary>
+             Each exception will inherit from CustomException
+            </summary>
+        </member>
+        <member name="M:FetchUsersAPI.Exceptions.ConflictException.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:FetchUsersAPI.Exceptions.CustomException">
+            <summary>
+            Custom Exception inherit from Exception, this is the base class for other exceptions.
+            </summary>
+        </member>
+        <member name="P:FetchUsersAPI.Exceptions.CustomException.ErrorMessages">
+            <summary>
+            property which hold ErrorMessages
+            </summary>
+        </member>
+        <member name="P:FetchUsersAPI.Exceptions.CustomException.StatusCode">
+            <summary>
+            property which hold StatusCode
+            </summary>
+        </member>
+        <member name="M:FetchUsersAPI.Exceptions.CustomException.#ctor(System.String,System.Collections.Generic.List{System.String},System.Net.HttpStatusCode)">
+            <summary>
+            Custom Exception
+            </summary>
+            <param name="message"></param>
+            <param name="errors"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:FetchUsersAPI.Exceptions.InternalServerException">
+            <summary>
+            Each exception will inherit from CustomException
+            </summary>
+        </member>
+        <member name="M:FetchUsersAPI.Exceptions.InternalServerException.#ctor(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Handling server exception
+            </summary>
+            <param name="message"></param>
+            <param name="errors"></param>
+        </member>
+        <member name="T:FetchUsersAPI.Exceptions.NotFoundException">
+            <summary>
+            Each exception will inherit from CustomException
+            </summary>
+        </member>
+        <member name="M:FetchUsersAPI.Exceptions.NotFoundException.#ctor(System.String)">
+            <summary>
+            Handling NotFound Exception
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:FetchUsersAPI.Middleware.ExceptionMiddleware">
+            <summary>
+            ExceptionMiddleware
+            </summary>
+        </member>
+        <member name="T:FetchUsersAPI.Middleware.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FetchUsersAPI.Middleware.Startup.UseExceptionMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <returns></returns>
+        </member>
+        <member name="T:FetchUsersAPI.Models.ErrorResult">
+            <summary>
+            Model for ErrorResult
+            </summary>
+        </member>
+        <member name="P:FetchUsersAPI.Models.ErrorResult.Messages">
+            <summary>
+            property which hold the messages
+            </summary>
+        </member>
+        <member name="P:FetchUsersAPI.Models.ErrorResult.Source">
+            <summary>
+            property which hold the Source
+            </summary>
+        </member>
+        <member name="P:FetchUsersAPI.Models.ErrorResult.Exception">
+            <summary>
+            property which hold the Exception
+            </summary>
+        </member>
+        <member name="P:FetchUsersAPI.Models.ErrorResult.ErrorId">
+            <summary>
+            property which hold the Error Id
+            </summary>
+        </member>
+        <member name="P:FetchUsersAPI.Models.ErrorResult.SupportMessage">
+            <summary>
+            property which hold the support messages
+            </summary>
+        </member>
+        <member name="P:FetchUsersAPI.Models.ErrorResult.StatusCode">
+            <summary>
+            property which hold the status code
+            </summary>
+        </member>
+    </members>
+</doc>
